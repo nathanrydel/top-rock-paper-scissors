@@ -9,14 +9,15 @@
   <link rel="shortcut icon" href="https://www.theodinproject.com/assets/icons/odin-icon-22b41941.svg"
     type="image/x-icon">
   <script src="https://kit.fontawesome.com/4c536a6bd5.js" crossorigin="anonymous"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet" />
 </head>
 
 <body>
   <!-- HEADER SECTION -->
   <header>
     <nav>
-      <img class="header-logo" src="https://www.theodinproject.com/assets/icons/odin-icon-22b41941.svg"
-        class="header-name">
+      <img class="header-logo" src="https://www.theodinproject.com/assets/icons/odin-icon-22b41941.svg">
       <a href="/https://www.theodinproject.com/lessons/foundations-rock-paper-scissors" target="_blank"
         class="header-name">
         TOP Foundations - Rock, Paper, Scissors
@@ -35,7 +36,7 @@
         </article>
         <article class="score-box">
           <div class="sign" id="computer-sign">🖥️</div>
-          <p class="score" id="computerScore">Computer: 0</p>
+          <p class="score" id="computer-score">Computer: 0</p>
         </article>
       </div>
     </section>
@@ -64,10 +65,11 @@
     </a>
   </footer>
   <!-- MODAL SECTION -->
-  <dialog id="endgame-modal" class="modal">
+  <div id="endgame-modal" class="modal">
     <h2 id="endgame-msg"></h2>
     <button class="btn btn-restart" id="restart-btn">Play again</button>
-  </dialog>
+  </div>
+  <div class="overlay" id="overlay" role="presentation"></div>
   <script src="bundle.js"></script>
 </body>
 
