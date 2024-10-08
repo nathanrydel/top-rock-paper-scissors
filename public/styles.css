@@ -1,0 +1,233 @@
+:root {
+  --primary-light: #ddd;
+  --primary-dark: #222831;
+  --secondary-dark: #393e46;
+  --secondary-dark-hover: #4a4f57;
+  --secondary-dark-active: #5b5f68;
+  --header: #111720;
+  --primary-yellow: #fac650;
+  --base-font-size: 16px; /* You can define a base size for conversion reference */
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  background-color: var(--primary-dark);
+  color: var(--primary-light);
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  margin-bottom: 6.25rem;
+}
+
+button {
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  outline: none;
+}
+
+/* HEADER */
+
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background-color: var(--header);
+}
+
+.header-logo {
+  margin: 0 2.5rem;
+}
+
+.header-name {
+  font-size: 2rem;
+  color: var(--primary-yellow);
+  font-family: 'Press Start 2P', sans-serif;
+}
+
+/* MAIN */
+
+main {
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.scoreboard {
+  margin-bottom: 1rem;
+}
+
+#score-info {
+  font-size: 2rem;
+}
+
+#score-message {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+.scores-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 25rem;
+  padding: 0.625rem;
+  margin: 0 auto;
+}
+
+.score-box {
+  width: 10.625rem;
+}
+
+.score {
+  margin-top: 0.625rem;
+  margin-bottom: 1.25rem;
+  font-size: 1.375rem;
+  font-weight: bold;
+}
+
+.game-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.875rem;
+}
+
+.btn {
+  border-radius: 0.625rem;
+  background-color: var(--secondary-dark);
+}
+
+.btn-square {
+  width: 10rem;
+  height: 10rem;
+}
+
+.btn:hover {
+  background-color: var(--secondary-dark-hover);
+}
+
+.btn:active {
+  background-color: var(--secondary-dark-active);
+}
+
+.sign {
+  font-size: 5rem;
+  margin-bottom: 0.625rem;
+}
+
+/* FOOTER */
+
+footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  width: 100%;
+  padding: 0.625rem;
+  color: var(--primary-light);
+  font-size: 1.25rem;
+}
+
+.fa-github {
+  color: var(--primary-light);
+  font-size: 1.5rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.fa-github:hover {
+  transform: rotate(360deg) scale(1.2);
+}
+
+/* MODALS */
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  width: 18.75rem;
+  padding: 1.875rem;
+  border-radius: 0.625rem;
+  background-color: var(--primary-dark);
+  text-align: center;
+  font-size: 1.875rem;
+  user-select: none;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+}
+
+.modal.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.btn-restart {
+  padding: 0.625rem 1.25rem;
+  margin-top: 1.5625rem;
+  margin-bottom: 0.9375rem;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  opacity: 0.6;
+}
+
+.overlay.active {
+  display: block;
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 768px) {
+  .header-name {
+    font-size: 1.125rem;
+  }
+
+  #score-info {
+    font-size: 1.625rem;
+  }
+
+  .game-controls {
+    gap: 0.625rem;
+  }
+
+  .btn-square {
+    width: 6.25rem;
+    height: 6.25rem;
+  }
+
+  .sign {
+    font-size: 3.125rem;
+  }
+
+  .modal {
+    width: 95%;
+  }
+}
